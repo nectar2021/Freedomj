@@ -12,21 +12,7 @@
     <meta name="description" content="Homez - Real Estate HTML Template">
     <meta name="CreativeLayers" content="ATFN">
     <!-- css file -->
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/ace-responsive-menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/bootstrap-select.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/ud-custom-spacing.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/dashbord_navitaion.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/animate.css') }}">
-    <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/responsive.css') }}">
+    @vite(['resources/sass/admin/app.scss', 'resources/js/admin/main.js'])
 
     <!-- Title -->
     <title>Homez - Real Estate HTML Template</title>
@@ -80,26 +66,7 @@
         </div>
     </div>
                 <!-- Wrapper End -->
-                <script src="{{ asset ('backend/assets/js/jquery-3.6.4.min.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/jquery-migrate-3.0.0.min.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/popper.min.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/bootstrap.min.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/bootstrap-select.min.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/jquery.mmenu.all.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/ace-responsive-menu.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/jquery-scrolltofixed-min.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/wow.min.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/owl.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/parallax.js') }}"></script>
-                <script src="{{ asset ('backend/assets/js/pricing-slider.js') }}"></script>
-                <script src="{{ asset('backend/assets/js/dashboard-script.js')}}"></script>
-                <script src="{{ asset('backend/assets/js/chart-custome.js')}}"></script>
-                <script src="{{ asset('backend/assets/js/chart.min.js')}}"></script>
 
-
-
-                <!-- Custom script for all pages -->
-                <script src="{{ asset ('backend/assets/js/script.js') }}"></script>
                 </body>
 
 

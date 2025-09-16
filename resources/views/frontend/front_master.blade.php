@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
-<!-- Mirrored from creativelayers.net/themes/homez-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 15:26:33 GMT -->
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +10,10 @@
         content="advanced search, agency, agent, classified, directory, house, listing, property, real estate, real estate agency, real estate agent, realestate, realtor, rental">
     <meta name="description" content="Homez - Real Estate HTML Template">
     <meta name="CreativeLayers" content="ATFN">
+
     <!-- css file -->
+
+    
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/ace-responsive-menu.css') }}">
@@ -26,7 +28,7 @@
     <!-- Responsive stylesheet -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
     <!-- Title -->
-    <title>Homez - Real Estate HTML Template</title>
+ <title>@yield('title', 'Homez - Real Estate')</title>
     <!-- Favicon -->
     <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
     <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />
@@ -447,7 +449,7 @@
 
         <div class="body_content_wrapper">
             <!-- Home Banner Style V1 -->
-            @yield('index')
+     @yield('content')
             <!-- Our Footer -->
           @include('user_interface.body.footer')
             <a class="scrollToHome" href="#"><i class="fas fa-angle-up"></i></a>
@@ -472,3 +474,5 @@
 
 
                 </html>
+
+update it since i have remove the styles and script 

@@ -1,6 +1,7 @@
-@extends('user_interface.front_master')
+@extends('frontend.front_master')
 
-@section('index')
+@section('content')
+
 
 
 <section class="home-banner-style1 p0">
