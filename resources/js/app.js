@@ -7,10 +7,39 @@ document.addEventListener('DOMContentLoaded', () => {
     return
   }
 
-  // example: ensure dropdowns behave on hover/focus
-  $('#respMenu > li').on('mouseenter focusin', function(){
+  const $navItems = $('#respMenu > li')
+
+  $navItems.each(function () {
+    const $trigger = $(this).find('> a[aria-haspopup="true"]')
+    if ($trigger.length) {
+      $trigger.attr('aria-expanded', 'false')
+    }
+  })
+
+  $navItems.on('mouseenter focusin', function () {
     $(this).addClass('open')
-  }).on('mouseleave focusout', function(){
+    const $trigger = $(this).find('> a[aria-haspopup="true"]')
+    if ($trigger.length) {
+      $trigger.attr('aria-expanded', 'true')
+    }
+  }).on('mouseleave focusout', function () {
     $(this).removeClass('open')
+    const $trigger = $(this).find('> a[aria-haspopup="true"]')
+    if ($trigger.length) {
+      $trigger.attr('aria-expanded', 'false')
+    }
+  })
+
+  $('#respMenu > li > a[aria-haspopup="true"]').on('click', function (event) {
+    event.preventDefault()
+    const $parent = $(this).parent()
+    const willOpen = !$parent.hasClass('open')
+
+    $navItems.removeClass('open').find('> a[aria-haspopup="true"]').attr('aria-expanded', 'false')
+
+    if (willOpen) {
+      $parent.addClass('open')
+      $(this).attr('aria-expanded', 'true')
+    }
   })
 })

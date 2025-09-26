@@ -18,3 +18,13 @@ Route::get('/dashboard', function () {
 
 // ✅ Property detail page
 Route::get('/property/{id}', [PropertyController::class, 'show'])->name('property.show');
+
+Route::prefix('services')->name('services.')->group(function () {
+    Route::view('/integrated-facilities-management', 'services.integrated-facilities-management')->name('ifm');
+    Route::view('/property-management-services', 'services.property-management-services')->name('pms');
+    Route::view('/maintenance-management-services', 'services.maintenance-management-services')->name('mms');
+    Route::view('/estate-agency-brokerage-services', 'services.estate-agency-brokerage-services')->name('eabs');
+    Route::view('/asset-management-services', 'services.asset-management-services')->name('ams');
+    Route::view('/property-development-services', 'services.property-development-services')->name('pds');
+    Route::view('/land-administration', 'services.land-administration')->name('la');
+});

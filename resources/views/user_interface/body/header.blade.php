@@ -11,47 +11,46 @@
         </div>
 
         <!-- Middle: Desktop nav (≥ lg) -->
-        <div class="col d-none d-lg-block">
-          <ul id="respMenu" class="ace-responsive-menu mb-0" data-menu-style="horizontal">
-            <!-- Services -->
-            <li class="visible_list">
-              <a class="list-item" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
+        <div class="col d-none d-lg-flex justify-content-center">
+              <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">            <!-- Services -->
+            <li class="visible_list has-submenu">
+              <a class="list-item" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="title">Services</span>
               </a>
-              <ul class="dropdown">
-                <li><a href="#">Integrated Facilities Management</a></li>
-                <li><a href="#">Property Management Services</a></li>
-                <li><a href="#">Maintenance Management Services</a></li>
-                <li><a href="#">Estate Agency/Brokerage Services</a></li>
-                <li><a href="#">Asset Management Services</a></li>
-                <li><a href="#">Property Development Services</a></li>
-                <li><a href="#">Land Administration</a></li>
+              <ul class="sub-menu">
+                <li><a class="dropdown-link" href="{{ route('services.ifm') }}">Integrated Facilities Management</a></li>
+                <li><a class="dropdown-link" href="{{ route('services.pms') }}">Property Management Services</a></li>
+                <li><a class="dropdown-link" href="{{ route('services.mms') }}">Maintenance Management Services</a></li>
+                <li><a class="dropdown-link" href="{{ route('services.eabs') }}">Estate Agency/Brokerage Services</a></li>
+                <li><a class="dropdown-link" href="{{ route('services.ams') }}">Asset Management Services</a></li>
+                <li><a class="dropdown-link" href="{{ route('services.pds') }}">Property Development Services</a></li>
+                <li><a class="dropdown-link" href="{{ route('services.la') }}">Land Administration</a></li>
               </ul>
             </li>
 
             <!-- Research -->
-            <li class="visible_list">
-              <a class="list-item" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
+            <li class="visible_list has-submenu">
+              <a class="list-item" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="title">Research</span>
               </a>
-              <ul class="dropdown">
-                <li><a href="#">Market Insights</a></li>
-                <li><a href="#">Trends & Reports</a></li>
-                <li><a href="#">White Papers</a></li>
-                <li><a href="#">Data Tools</a></li>
+              <ul class="sub-menu">
+                <li><a class="dropdown-link" href="#">Market Insights</a></li>
+                <li><a class="dropdown-link" href="#">Trends & Reports</a></li>
+                <li><a class="dropdown-link" href="#">White Papers</a></li>
+                <li><a class="dropdown-link" href="#">Data Tools</a></li>
               </ul>
             </li>
 
             <!-- Properties -->
-            <li class="visible_list">
-              <a class="list-item" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
+            <li class="visible_list has-submenu">
+              <a class="list-item" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="title">Properties</span>
               </a>
-              <ul class="dropdown">
-                <li><a href="#">Property List V1</a></li>
-                <li><a href="#">Property List V2</a></li>
-                <li><a href="#">Property Grid View</a></li>
-                <li><a href="#">Single Property</a></li>
+              <ul class="sub-menu">
+                <li><a class="dropdown-link" href="#">Property List V1</a></li>
+                <li><a class="dropdown-link" href="#">Property List V2</a></li>
+                <li><a class="dropdown-link" href="#">Property Grid View</a></li>
+                <li><a class="dropdown-link" href="#">Single Property</a></li>
               </ul>
             </li>
 
@@ -60,14 +59,14 @@
             <li class="visible_list"><a class="list-item" href="#"><span class="title">Our Offices</span></a></li>
 
             <!-- Careers -->
-            <li class="visible_list">
-              <a class="list-item" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
+            <li class="visible_list has-submenu">
+              <a class="list-item" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="title">Careers</span>
               </a>
-              <ul class="dropdown">
-                <li><a href="#">Open Roles</a></li>
-                <li><a href="#">Internships</a></li>
-                <li><a href="#">Submit Resume</a></li>
+              <ul class="sub-menu">
+                <li><a class="dropdown-link" href="#">Open Roles</a></li>
+                <li><a class="dropdown-link" href="#">Internships</a></li>
+                <li><a class="dropdown-link" href="#">Submit Resume</a></li>
               </ul>
             </li>
 
@@ -78,7 +77,7 @@
 
         <!-- Right: CTA (≥ xl) + Mobile toggle (< lg) -->
         <div class="col-auto d-flex align-items-center">
-          <a class="ud-btn add-property menu-btn bdrs60 d-none d-xl-inline-flex me-2" href="#">Add Property</a>
+          <a class="ud-btn add-property menu-btn bdrs60 d-none d-xl-inline-flex me-2" href="page-dashboard-add-property.html">Add Property<i class="fal fa-arrow-right-long"></i></a>
 
           <!-- Mobile hamburger (visible < lg) -->
           <button class="btn btn-outline-secondary d-lg-none" type="button"
@@ -107,13 +106,13 @@
               </button>
               <div id="mServices" class="collapse">
                 <ul class="list-unstyled ps-3 mt-2">
-                  <li><a href="#">Integrated Facilities Management</a></li>
-                  <li><a href="#">Property Management Services</a></li>
-                  <li><a href="#">Maintenance Management Services</a></li>
-                  <li><a href="#">Estate Agency/Brokerage Services</a></li>
-                  <li><a href="#">Asset Management Services</a></li>
-                  <li><a href="#">Property Development Services</a></li>
-                  <li><a href="#">Land Administration</a></li>
+                  <li><a href="{{ route('services.ifm') }}">Integrated Facilities Management</a></li>
+                  <li><a href="{{ route('services.pms') }}">Property Management Services</a></li>
+                  <li><a href="{{ route('services.mms') }}">Maintenance Management Services</a></li>
+                  <li><a href="{{ route('services.eabs') }}">Estate Agency/Brokerage Services</a></li>
+                  <li><a href="{{ route('services.ams') }}">Asset Management Services</a></li>
+                  <li><a href="{{ route('services.pds') }}">Property Development Services</a></li>
+                  <li><a href="{{ route('services.la') }}">Land Administration</a></li>
                 </ul>
               </div>
             </li>
@@ -174,7 +173,7 @@
 
             <!-- CTA on mobile -->
             <li class="mt-3">
-              <a class="ud-btn add-property menu-btn w-100" href="#">Add Property</a>
+              <a class="ud-btn add-property menu-btn w-100" href="page-dashboard-add-property.html">Add Property<i class="fal fa-arrow-right-long"></i></a>
             </li>
           </ul>
         </nav>
