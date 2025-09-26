@@ -3275,22 +3275,28 @@ h2 {
 }
 
 /* Hero Styles All Type Of */
-.home-banner-style1 {
-  background-image: url(../images/home/web_front.jpg);
-  background-position: center center;
+/* Make the hero image fill the full width/height cleanly */
+.home-banner-style1{
+  background-image: url("../images/home/home-5-2.jpg");
+  background-size: cover;          /* fill area, crop if needed */
+  background-position: center;     /* keep subject centered */
   background-repeat: no-repeat;
   position: relative;
+  min-height: clamp(480px, 75vh, 900px); /* responsive height */
 }
-.home-banner-style1 .home-style1 {
-  align-items: center;
+
+/* vertically center content */
+.home-banner-style1 .home-style1{
   display: flex;
-  height: 860px;
+  align-items: center;
+  min-height: inherit; /* inherit responsive height */
 }
-@media (max-width: 991.98px) {
-  .home-banner-style1 .home-style1 {
-    height: 500px;
-  }
+
+/* Mobile tweak */
+@media (max-width: 991.98px){
+  .home-banner-style1{ min-height: 60vh; }
 }
+
 
 .inner-banner-style1 .hero-sub-title {
   color: #ffffff;
@@ -10430,5 +10436,78 @@ input:focus-visible {
     border-bottom: 1px solid #DDDDDD;
   }
 }
+
+/* Logo sizing */
+.header-nav .header-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+@media (min-width: 1400px){
+  .header-nav .header-logo img { height: 48px; }
+}
+
+/* Desktop nav: one line, even spacing */
+#respMenu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+#respMenu > li { list-style: none; position: relative; }
+#respMenu > li > a.list-item {
+  padding: 10px 6px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Dropdown (desktop) */
+#respMenu li .dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: #fff;
+  min-width: 240px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  z-index: 1000;
+}
+#respMenu li:hover > .dropdown,
+#respMenu li:focus-within > .dropdown { display: block; }
+
+#respMenu li .dropdown li { list-style: none; white-space: normal; }
+#respMenu li .dropdown a {
+  display: block;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #222;
+  border-radius: 6px;
+  text-decoration: none;
+}
+#respMenu li .dropdown a:hover {
+  background: rgba(0,0,0,.04);
+  color: #007bff;
+}
+
+/* Keep layout tidy on wide screens */
+.header-nav .row.gx-3 { --bs-gutter-x: 1rem; }
+
+/* Mobile offcanvas tweaks */
+.offcanvas .mobile-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+.offcanvas .mobile-parent {
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+.offcanvas .mobile-parent:focus { box-shadow: none; }
+.offcanvas .collapse a { padding: 6px 0; display: block; }
 
 /*# sourceMappingURL=style.css.map */
